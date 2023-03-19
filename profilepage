@@ -1,0 +1,16 @@
+const Home = () => {
+const logout=()=>{
+    localStorage.clear()
+    window.location.reload()
+}
+const name=localStorage.getItem("emaildata")
+    return (
+        <div>
+            <h1>Welcome {name}!!!</h1>
+            <h2>you are loged in</h2>
+            <button className="but-all" onClick={logout}>Logout</button>
+        </div>
+    );
+}
+
+export default Home;
